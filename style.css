@@ -1,0 +1,307 @@
+/* =========================================
+   ZION CHURCH — GLOBAL STYLES
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 6%;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 34px;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    opacity: 0.85;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding: 140px 8%;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 13, 28, 0.92),
+            rgba(3, 13, 28, 0.55),
+            rgba(3, 13, 28, 0.2)
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.55)
+        ),
+        url('https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=2200&q=85');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content > p:first-child {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    margin-bottom: 24px;
+
+    opacity: 0.8;
+}
+
+.hero h2 {
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(52px, 7vw, 105px);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.hero-content > p:nth-of-type(2) {
+    font-size: 17px;
+
+    color: rgba(255,255,255,0.78);
+
+    margin-bottom: 38px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 15px 27px;
+
+    background: white;
+    color: #111111;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background: #dce9f5;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome {
+    padding: 150px 8%;
+
+    max-width: 1400px;
+    margin: auto;
+}
+
+.welcome > p:first-child {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #52708f;
+
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(42px, 6vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    max-width: 900px;
+
+    margin-bottom: 40px;
+}
+
+.welcome > p:last-child {
+    max-width: 620px;
+
+    font-size: 18px;
+
+    color: #666666;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #071321;
+
+    color: white;
+
+    padding: 70px 8%;
+
+    text-align: center;
+}
+
+footer h2 {
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 30px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: rgba(255,255,255,0.6);
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 22px 6%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 130px 7% 80px;
+
+        min-height: 90vh;
+
+        background-position: 60% center;
+    }
+
+    .hero h2 {
+        font-size: clamp(48px, 14vw, 75px);
+
+        letter-spacing: -3px;
+    }
+
+    .hero-content > p:nth-of-type(2) {
+        font-size: 15px;
+    }
+
+    .welcome {
+        padding: 100px 7%;
+    }
+
+    .welcome h2 {
+        font-size: 48px;
+    }
+
+    footer {
+        padding: 60px 7%;
+    }
+
+}
